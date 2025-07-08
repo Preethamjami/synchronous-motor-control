@@ -7,11 +7,11 @@ gpio.setmode(gpio.BCM)
 MOTORPARAMS = {
                'X':{'gear_ratio':1,'step_angle':1.8,'dir_pin':2,'step_pin':3,'enable_pin':14,'wheel_dia':40},
                'Y':{'gear_ratio':1,'step_angle':1.8,'dir_pin':12,'step_pin':17,'enable_pin':14,'wheel_dia':20},
-               'L1':{'gear_ratio':5.2,'step_angle':1.8,'dir_pin':27,'step_pin':22,'enable_pin':15,'limit':180},
+               'L1':{'gear_ratio':5.2,'step_angle':1.8,'dir_pin':18,'step_pin':23,'enable_pin':16,'limit':180},
                'L2':{'gear_ratio':13,'step_angle':1.8,'dir_pin':24,'step_pin':25,'enable_pin':15,'limit':180},
                'L3':{'gear_ratio':5.2,'step_angle':1.8,'dir_pin':20,'step_pin':21,'enable_pin':15,'limit':180},
                'L4':{'gear_ratio':5.2,'step_angle':1.8,'dir_pin':20,'step_pin':21,'enable_pin':15,'limit':180},
-               'R1':{'gear_ratio':5.2,'step_angle':1.8,'dir_pin':18,'step_pin':23,'enable_pin':16,'limit':180},
+               'R1':{'gear_ratio':5.2,'step_angle':1.8,'dir_pin':27,'step_pin':22,'enable_pin':15,'limit':180},
                'R2':{'gear_ratio':19.2,'step_angle':1.8,'dir_pin':10,'step_pin':9,'enable_pin':16,'limit':180},
                'R3':{'gear_ratio':5.2,'step_angle':1.8,'dir_pin':11,'step_pin':5,'enable_pin':16,'limit':180},
                'R4':{'gear_ratio':1,'step_angle':1.8,'dir_pin':6,'step_pin':13,'enable_pin':16,'limit':180},
