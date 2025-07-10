@@ -37,7 +37,7 @@ for value in arm_displacement :
     arm_displacement_pulses[value] = (abs(arm_displacement[value])*MOTORPARAMS[value]['gear_ratio'])/MOTORPARAMS[value]['step_angle']
 for value in linear_displacement :
     linear_displacement[value] = input(value+':')
-    linear_displacement_pulses[value] = (abs(linear_displacement[value])/(MOTORPARAMS[value]['wheel_dia']*3.14))*360*MOTORPARAMS[value]['gear_ratio']/MOTORPARAMS[value]['step_angle']
+    linear_displacement_pulses[value] = (abs(linear_displacement[value])*360*MOTORPARAMS[value]['gear_ratio'])/(MOTORPARAMS[value]['wheel_dia']*3.14*MOTORPARAMS[value]['step_angle'])
 
 # Find the maximum pulse value for arm displacement and linear displacement and set the pulse width accordingly
 max_arm_pulse = max(arm_displacement_pulses.values())
