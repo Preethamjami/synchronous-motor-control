@@ -34,10 +34,10 @@ linear_pulsewidth = {'X':0,'Y':0}
 # Get user input for arm and linear displacements and calculate the corresponding pulse values
 for value in arm_displacement :
     arm_displacement[value] = input(value+':')
-    arm_displacement_pulses[value] = (abs(arm_displacement[value])*MOTORPARAMS[value]['gear_ratio'])/MOTORPARAMS[value]['step_angle']
+    arm_displacement_pulses[value] = (abs(int(arm_displacement[value]))*MOTORPARAMS[value]['gear_ratio'])/MOTORPARAMS[value]['step_angle']
 for value in linear_displacement :
     linear_displacement[value] = input(value+':')
-    linear_displacement_pulses[value] = (abs(linear_displacement[value])*360*MOTORPARAMS[value]['gear_ratio'])/(MOTORPARAMS[value]['wheel_dia']*3.14*MOTORPARAMS[value]['step_angle'])
+    linear_displacement_pulses[value] = (abs(int(linear_displacement[value]))*360*MOTORPARAMS[value]['gear_ratio'])/(MOTORPARAMS[value]['wheel_dia']*3.14*MOTORPARAMS[value]['step_angle'])
 
 # Find the maximum pulse value for arm displacement and linear displacement and set the pulse width accordingly
 max_arm_pulse = max(arm_displacement_pulses.values())
@@ -61,7 +61,7 @@ for motor in MOTORPARAMS:
 
 def rotate_motor(motor,pulses,pulsewidth,angle):
     # Set direction based on the angle :
-    if angle < 0:
+    if int(angle) < 0:
         gpio.output(MOTORPARAMS[motor]['dir_pin'], gpio.LOW)  # Set direction to reverse
     else:
         gpio.output(MOTORPARAMS[motor]['dir_pin'], gpio.HIGH)  # Set direction to forward
